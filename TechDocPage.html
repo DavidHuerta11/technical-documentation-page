@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <title>ST Documentation</title>
+    <link rel="stylesheet" type="text/css" href="techdocstyle.css">
+    <script src="https://kit.fontawesome.com/d94cce2e50.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@500;700&family=Noto+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+    <!--font-family: 'Noto Sans', sans-serif;
+        font-family: 'Baloo Bhaina 2', cursive; weight:500/700
+        font-family: 'Poppins', sans-serif; weight:500/600-->
+</head>
+
+<body>
+    <main id="main-doc">
+        <nav id="navbar">
+            <header id="navmenu">
+                <div class="logo-container">
+                    <img class="shrink-img" src="sublimetextlogo.png" alt="sublime text logo">
+                    <p>Sublime Text Documentation</p>
+                </div>
+                <a href="#introduction" class="nav-link">Introduction</a>
+                <a href="#installation" class="nav-link">Installation</a>
+                <a href="#packages" class="nav-link">Packages</a>
+                <a href="#key_bindings" class="nav-link">Key Bindings</a>
+                <a href="#creating_first_doc" class="nav-link">Creating First Document</a>
+                <a href="#reference" class="nav-link">Reference</a>
+            </header>
+        </nav>
+        <div id="content">
+            <h1 class=" cover-image cover-text">Sublime Text Documentation</h1>
+            <section id="introduction" class="main-section">
+                <!-- information pertaining to Sublime Text -->
+                <header>
+                    <!-- contains text that describes section "Introduction" -->
+                    <h2 class="section-title">Introduction</h2>
+                </header>
+                <p>Sublime Text Editor is a full featured Text editor for editing local files or a code base. It includes various features for editing code base which helps developers to keep track of changes.</p>
+                <p>Sublime Text editor is used as an Integrated Development Editor (IDE) like Visual Studio code and NetBeans. The current version of Sublime Text editor is 3.0 and is compatible with various operating systems like Windows, Linux and MacOS.</p>
+                <p>When you use a suitable Text editor, you can enjoy its rich beneficial features.</p>
+                <ul>
+                    <li>Syntax Highlight</li>
+                    <li>Auto Indentation</li>
+                    <li>File Type Recognition</li>
+                    <li>Sidebars with files of mentioned directory</li>
+                    <li>Macros</li>
+                    <li>Plug-in and Packages</li>
+                </ul>
+            </section>
+            <section id="installation" class="main-section">
+                <header>
+                    <!-- contains text that describes section "Installation" -->
+                    <div class="section-header">
+                        <i class="fas fa-cog"></i>
+                        <h2 class="section-title">Installation</h2>
+                    </div>
+                </header>
+                <p>You can download Sublime Text from its official Website: <a href="https://www.sublimetext.com/" target="_blank">www.sublimetext.com</a>.</p>
+                <h3 class="section-sub-title">Intallation on Windows</h3>
+                <h4 class="section-sub-title">Step 1:</h4>
+                <p>Download the .exe package from the official website: <a href="https://www.sublimetext.com/3" target="_blank">www.sublimetext.com/3</a>.</p>
+                <h4 class="section-sub-title">Step 2:</h4>
+                <p>Now, run the executable file. This defines the environment variables.</p>
+                <h4 class="section-sub-title">Step 3:</h4>
+                <p>Upon a successful installation, your editor will appear.</p>
+                <h3 class="section-sub-title">Intallation on Linux</h3>
+                <h4 class="section-sub-title">Step 1:</h4>
+                <p>Using the command line terminal, install the packages for Sublime Text editor, using the command given below:</p>
+                <code>sudo add-apt-repository ppa:webupd8team/Sublime-Text-3</code>
+                <h4 class="section-sub-title">Step 2:</h4>
+                <p>Using the command line terminal, install the packages for Sublime Text editor, using the command given below:</p>
+                <code>sudo apt-get update</code>
+                <h4 class="section-sub-title">Step 3:</h4>
+                <p>Install the Sublime Text repository using the following command given below:</p>
+                <code>sudo apt-get install Sublime-Text</code>
+            </section>
+            <section id="packages" class="main-section">
+                <header>
+                    <!-- contains text that describes section "Packages" -->
+                    <div class="section-header">
+                        <i class="fas fa-archive"></i>
+                        <h2 class="section-title">Packages</h2>
+                    </div>
+                </header>
+                <h4 class="section-sub-title">Step 1:</h4>
+                <p>Software packages are installed in Sublime Text for additional functionalities. You can see the list of software packages through the shortcut key <code>Ctrl+Shift+P</code> on Windows and <code>Cmd+Shift+P</code> on Mac.</p>
+                <p>These packages are installed in the Packages → User directory which includes the entire necessary configuration. To browse the packages, select Preferences → Browse Packages option.</p>
+                <p>These files are the customized configuration which can be changed as and when needed. The packages are created in JSON format.</p>
+                <p>Consider the sublime-keymap package created which includes following code:</p>
+                <code>
+                    [
+                    {
+                    "keys": ["super+alt+;"],
+                    "command": "run_macro_file",
+                    "args": {"file": "Packages/User/semicolon.sublime-macro"}
+                    }
+                    ]
+                </code>
+            </section>
+            <section id="key_bindings" class="main-section">
+                <header>
+                    <!-- contains text that describes section "Base Settings" -->
+                    <div class="section-header">
+                        <i class="fas fa-laptop"></i>
+                        <h2 class="section-title">Key Bindings</h2>
+                    </div>
+                </header>
+                <p>Key bindings in Sublime Text helps a user to process and map the sequences of key presses to actions. They are defined in the JSON format and are stored in .sublime-keymap files.</p>
+                <p>A user can open the keymap file or default key bindings using the option Preferences → Key Bindings.</p>
+                <p>The following example shows how to perform key bindings in Windows:</p>
+                <code>
+                    [
+                    { "keys": ["ctrl+shift+n"], "command": "new_window" },
+                    { "keys": ["ctrl+shift+w"], "command": "close_window" }
+                    ]
+                </code>
+                <h3 class="section-sub-title">Defining Key Bindings</h3>
+                <p>Sublime Text editor includes an option to define a key map. The key bindings defined in the file .sublime-keymap includes all the key value combinations.</p>
+                <p>You can include the following key binding set into this file and save them to check the execution, with the help of the code shown below:</p>
+                <code>
+                    [
+                    {
+                    "keys": ["super+alt+;"], "command": "run_macro_file",
+                    "args":
+                    {"file": "Packages/User/semicolon.sublime-macro"}
+                    }
+                    ]
+                </code>
+            </section>
+            <section id="creating_first_doc" class="main-section">
+                <header>
+                    <!-- contains text that describes section "Creating First Document" -->
+                    <div class="section-header">
+                        <i class="far fa-file-code"></i>
+                        <h2 class="section-title">Creating First Document</h2>
+                    </div>
+                </header>
+                <p>In this chapter, you will learn step by step how to create a file in Sublime Text.</p>
+                <h4 class="section-sub-title">Step 1:</h4>
+                <p>Use the option New File to create a file in Sublime Text editor.</p>
+                <img src="newfile.png" alt="picture of a new file">
+                <h4 class="section-sub-title">Step 2:</h4>
+                <p>Once the new file is available, you can insert the code, similar to any other text editor, and save the file in your working repository.</p>
+                <h4 class="section-sub-title">Step 3:</h4>
+                <p>Once you save the associated file, Sublime Text editor provides a variety of options based on the type of file, for example .php for PHP scripts, .py for Python scripts and .java for Java code base.</p>
+                <h4 class="section-sub-title">Step 4:</h4>
+                <p>As our code repository is on Python project, we will save the file as xxx.py.</p>
+            </section>
+            <section id="reference" class="main-section">
+                <header>
+                    <h2 class="section-title">Reference</h2>
+                </header>
+                <p>All the documentation in this page was taken from <a href="https://www.tutorialspoint.com/sublime_text/index.htm" target="_blank">tutorialspoint</a>.</p>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>
