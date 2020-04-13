@@ -1,0 +1,231 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --graybackground: rgb(237, 237, 237);
+    --blueshade: rgb(77, 210, 255);
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background: var(--graybackground);
+}
+
+#main-doc {
+    /* all items will inherit these */
+    display: grid;
+    /* mobile */
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "nav"
+        "content";
+    place-content: center;
+    line-height: 2em;
+}
+
+#navbar {
+    grid-area: nav;
+    max-width: 100%;
+    padding-bottom: 2.5em;
+}
+
+#content {
+    grid-area: content;
+    /* set width of all elements inside */
+    width: 100%;
+}
+
+#navmenu {
+    /* have menu vertical and on the left */
+    display: flex;
+    flex-direction: column;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+.logo-container {
+    /* aligns both items to the center */
+    text-align: center;
+}
+
+.shrink-img {
+    width: 4em;
+    padding-top: 1em;
+}
+
+#navmenu p {
+    font-family: 'Baloo Bhaina 2', cursive;
+    weight: 400;
+    font-size: 1.4em;
+    margin-bottom: 1em;
+}
+
+.nav-link {
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    border-bottom: 2px solid black;
+}
+
+.nav-link:hover {
+    color: var(--blueshade);
+}
+
+.cover-image {
+    /* fit background image */
+    height: 100vh;
+    background-image: url(darkback.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.cover-text {
+    /* format the text halfway down the image*/
+    font-size: 2em;
+    text-align: center;
+    padding: 50vh 0 50vh 0;
+}
+
+.main-section {
+    /* space out individual sections */
+    padding-top: 6em;
+    padding-bottom: 5em;
+    padding-right: 6em;
+    padding-left: 6em;
+}
+
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: var(--blueshade);
+    line-height: 2em;
+}
+
+.section-sub-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: var(--blueshade);
+    margin-top: 0.5em;
+}
+
+h3 {
+    margin-top: 3em !important;
+}
+
+section img {
+    width: 30em;
+    margin-top: 2em;
+}
+
+i.fas,
+i.far {
+    /* edit icons */
+    font-size: 2em;
+    color: var(--blueshade);
+    margin-right: 0.4em;
+    /* ensure icons rotate from center
+    font awesome icons have some included padding at bottom */
+    padding-top: 0.25em;
+    padding-right: 0.2em;
+    padding-left: 0.2em;
+}
+
+i.fas:hover,
+i.far:hover {
+    /* edit icons */
+    color: #0083af;
+    /* rotation animation */
+    animation-name: rotate-icon;
+    animation-duration: 1.4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+@keyframes rotate-icon {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+.section-header {
+    /* keep the icon and title on the same line */
+    display: flex;
+    flex-direction: row;
+}
+
+section ul {
+    margin-left: 4em;
+    margin-top: 1em;
+}
+
+#introduction {
+    background-color: white;
+}
+
+#introduction p,
+#packages p,
+#key_bindings p {
+    margin-top: 1em;
+}
+
+#installation a {
+    color: blue;
+}
+
+#installation a:hover {
+    color: var(--blueshade);
+}
+
+#packages {
+    background-color: white;
+}
+
+#creating_first_doc {
+    background-color: white;
+}
+
+#reference a {
+    color: blue;
+}
+
+#reference a:hover {
+    color: var(--blueshade);
+}
+
+@media (min-width: 800px) {
+    /* Desktops & Tablets */
+
+    #navbar {
+        border-right: 3px solid #ddd;
+        /* height = viewport's height */
+        height: 100vh;
+        /* Position of the navigation section, sticks to page */
+        position: sticky;
+        /* ensuring its attached to the top of the page */
+        top: 0;
+    }
+
+    .nav-link {
+        text-align: left;
+    }
+
+    #main-doc {
+        grid-template-columns: auto 80%;
+        grid-template-areas:
+            "nav content";
+    }
+}
