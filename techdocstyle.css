@@ -78,9 +78,10 @@ body {
     /* fit background image */
     height: 100vh;
     background-image: url(https://github.com/HazyStreet/technical-documentation-page/blob/master/darkback.jpg?raw=true);
-    background-size: cover;
-    background-position: center;
+    /* iOS doesn't support cover & fixed; results in blurry image */
+    background-size: cover;;
     background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
     color: white;
 }
@@ -206,14 +207,16 @@ section ul {
 
 .shadow-box {
     background-color: rgb(205, 244, 253);
-    border-radius: 1em;
-    padding-left: 1.6em;
-    padding-bottom: 1.5em;
-    padding-top: 0.5em;
-    display: block;
-    box-shadow: 3px 3px 3px rgb(126, 177, 189);
-    max-width: 80%;
-    line-height: 1.8em;
+  border-radius: 1em;
+  padding-left: 1.6em;
+  padding-bottom: 1.5em;
+  padding-top: 0.5em;
+  display: block;
+  box-shadow: 3px 3px 3px rgb(126, 177, 189);
+  max-width: 100%;
+  line-height: 1.8em;
+  /* wrap around */
+  overflow-wrap: break-word;
 }
 
 @media (min-width: 800px) {
@@ -237,5 +240,9 @@ section ul {
     .nav-link {
         text-align: left;
     }
+
+    .shadow-box {
+    max-width: 80%;
+  }
 
 }
