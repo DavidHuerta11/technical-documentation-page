@@ -58,7 +58,7 @@
                     </div>
                 </header>
                 <p>You can download Sublime Text from its official Website: <a href="https://www.sublimetext.com/" target="_blank">www.sublimetext.com</a>.</p>
-                <h3 class="section-sub-title">Intallation on Windows</h3>
+                <h3 class="section-sub-title">Installation on Windows</h3>
                 <h4 class="section-sub-title">Step 1:</h4>
                 <p>Download the .exe package from the official website: <a href="https://www.sublimetext.com/3" target="_blank">www.sublimetext.com/3</a>.</p>
                 <h4 class="section-sub-title">Step 2:</h4>
@@ -68,13 +68,19 @@
                 <h3 class="section-sub-title">Intallation on Linux</h3>
                 <h4 class="section-sub-title">Step 1:</h4>
                 <p>Using the command line terminal, install the packages for Sublime Text editor, using the command given below:</p>
-                <code>sudo add-apt-repository ppa:webupd8team/Sublime-Text-3</code>
+                <div class="shadow-box">
+                    <code>sudo add-apt-repository ppa:webupd8team/Sublime-Text-3</code>
+                </div>
                 <h4 class="section-sub-title">Step 2:</h4>
                 <p>Using the command line terminal, install the packages for Sublime Text editor, using the command given below:</p>
-                <code>sudo apt-get update</code>
+                <div class="shadow-box">
+                    <code>sudo apt-get update</code>
+                </div>
                 <h4 class="section-sub-title">Step 3:</h4>
                 <p>Install the Sublime Text repository using the following command given below:</p>
-                <code>sudo apt-get install Sublime-Text</code>
+                <div class="shadow-box">
+                    <code>sudo apt-get install Sublime-Text</code>
+                </div>
             </section>
             <section id="Packages" class="main-section">
                 <header>
@@ -85,19 +91,27 @@
                     </div>
                 </header>
                 <h4 class="section-sub-title">Step 1:</h4>
-                <p>Software packages are installed in Sublime Text for additional functionalities. You can see the list of software packages through the shortcut key <code>Ctrl+Shift+P</code> on Windows and <code>Cmd+Shift+P</code> on Mac.</p>
+                <p>Software packages are installed in Sublime Text for additional functionalities. You can see the list of software packages through the shortcut key on Windows:
+                    <div class="shadow-box">
+                        <code>Ctrl+Shift+P</code>
+                    </div>
+                    and on Mac:
+                    <div class="shadow-box">
+                        <code>Cmd+Shift+P</code>
+                    </div>
+                </p>
                 <p>These packages are installed in the Packages → User directory which includes the entire necessary configuration. To browse the packages, select Preferences → Browse Packages option.</p>
                 <p>These files are the customized configuration which can be changed as and when needed. The packages are created in JSON format.</p>
                 <p>Consider the sublime-keymap package created which includes following code:</p>
-                <code>
-                    [
-                    {
-                    "keys": ["super+alt+;"],
-                    "command": "run_macro_file",
-                    "args": {"file": "Packages/User/semicolon.sublime-macro"}
-                    }
-                    ]
-                </code>
+                <div class="shadow-box">
+                    <code>
+                        [{"keys": ["super+alt+;"],
+                        "command": "run_macro_file",
+                        "args": {"file": "Packages/User/semicolon.sublime-macro"}
+                        }
+                        ]
+                    </code>
+                </div>
             </section>
             <section id="Key_Bindings" class="main-section">
                 <header>
@@ -110,24 +124,20 @@
                 <p>Key bindings in Sublime Text helps a user to process and map the sequences of key presses to actions. They are defined in the JSON format and are stored in .sublime-keymap files.</p>
                 <p>A user can open the keymap file or default key bindings using the option Preferences → Key Bindings.</p>
                 <p>The following example shows how to perform key bindings in Windows:</p>
-                <code>
-                    [
-                    { "keys": ["ctrl+shift+n"], "command": "new_window" },
-                    { "keys": ["ctrl+shift+w"], "command": "close_window" }
-                    ]
-                </code>
+                <div class="shadow-box">
+                    <code>
+                        [
+                        { "keys": ["ctrl+shift+n"], "command": "new_window" },
+                        { "keys": ["ctrl+shift+w"], "command": "close_window" }
+                        ]
+                    </code>
+                </div>
                 <h3 class="section-sub-title">Defining Key Bindings</h3>
                 <p>Sublime Text editor includes an option to define a key map. The key bindings defined in the file .sublime-keymap includes all the key value combinations.</p>
                 <p>You can include the following key binding set into this file and save them to check the execution, with the help of the code shown below:</p>
-                <code>
-                    [
-                    {
-                    "keys": ["super+alt+;"], "command": "run_macro_file",
-                    "args":
-                    {"file": "Packages/User/semicolon.sublime-macro"}
-                    }
-                    ]
-                </code>
+                <div class="shadow-box">
+                    <code>[{"keys": ["super+alt+;"], "command": "run_macro_file", "args": {"file": "Packages/User/semicolon.sublime-macro"}}]</code>
+                </div>
             </section>
             <section id="Creating_First_Document" class="main-section">
                 <header>
