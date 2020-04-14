@@ -170,37 +170,37 @@ section ul {
     margin-top: 1em;
 }
 
-#introduction {
+#Introduction {
     background-color: white;
 }
 
-#introduction p,
-#packages p,
-#key_bindings p {
+#Introduction p,
+#Packages p,
+#Key_Bindings p {
     margin-top: 1em;
 }
 
-#installation a {
+#Installation a {
     color: blue;
 }
 
-#installation a:hover {
+#Installation a:hover {
     color: var(--blueshade);
 }
 
-#packages {
+#Packages {
     background-color: white;
 }
 
-#creating_first_doc {
+#Creating_First_Document {
     background-color: white;
 }
 
-#reference a {
+#Reference a {
     color: blue;
 }
 
-#reference a:hover {
+#Reference a:hover {
     color: var(--blueshade);
 }
 
